@@ -1,0 +1,484 @@
+/* This is what a standard CSS comment looks like */
+
+body 
+{
+  background-color:aquamarine;
+  height: auto;
+  width: auto;
+}
+
+.divHour
+{
+  height: 1.5cm;
+  /*width: 100%;*/
+  animation: 2s linear 2s 1 alternate inHour;
+}
+
+/*Animacion divHour*/
+@keyframes inHour {
+  from {
+    filter: blur(1.5rem);
+  }
+
+  to {
+    filter: blur(0);
+  }
+}
+
+.image{
+  background-image: url("../images/fondoLibros.png");
+  background-repeat: no-repeat;
+  height: 186px;
+  width: 180px;
+  }
+
+/*
+.tit {
+  color: red;
+  font-size: 50px;
+  text-align: left;
+  font-family: sans-serif;
+}
+*/
+
+.titv2 {
+  color: green;
+  font-size: 50px;
+  text-align: center;
+  font-family: sans-serif;
+  margin: 0.5cm;
+}
+
+.subtiv2 {
+  font-size: 25px;
+  font-family: sans-serif;
+  display: grid;
+  place-items: center;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: auto;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  animation: typing 2s steps(65) 0.1s 1 normal both, blink 1s steps(1) infinite;
+  color: #666;
+}
+
+/*Animacion slogan*/
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 59%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.hour {
+  color: aquamarine;
+  font-size: 50px;
+  text-align: center;
+  background-color:green;
+  margin: auto;
+}
+
+/*
+.subti {
+  text-align: left;
+  font-size: 25px;
+}
+*/
+
+/*
+.ing {
+  color: red;
+  font-size: 20px;
+  align-content: flex-start;
+}
+*/
+
+.intask {
+  width: 60%;
+  height: 50px;
+  border: 3px solid green;
+  border-radius: 12px;
+  font-size: 30px;
+  color: green;
+  font-family: sans-serif;
+  padding: 5px 5px;
+}
+
+intask:focus, input:focus, input[type]:focus {
+  border-color: rgb(255, 144, 0);
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6);
+  outline: 0 none;
+}
+
+.divInputText {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.listReg {
+  color: black;
+  font-size: 20px;
+  text-align: left;
+}
+
+.taskListButton{
+  color:red;
+  font-size: 20px;
+  text-align: left;
+  margin: 15px;
+}
+
+.taskListButton:hover{background-color:yellow;}
+
+.tableLists {
+  width: 100%;
+  height: 250%;
+  border: 1px solid;
+  border-collapse: collapse;
+  text-align: left;
+  }
+  
+.labelDone{
+  color:green;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.labelHour
+{
+  color:green;
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-left: 2.5%;
+
+}
+
+.buttonReset {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color:grey;
+  border: none;
+  border-radius: 15px;
+  align-content: center;
+  margin-left: 0.25cm;
+  margin-top: 0.5cm;
+}
+
+.buttonReset:hover {background-color:#666}
+
+.buttonReset:active {
+background-color:666;
+box-shadow: 0 5px rgb(54, 50, 50);
+transform: translateY(4px);
+}
+
+.buttonSave {
+display: inline-block;
+padding: 15px 25px;
+font-size: 24px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+outline: none;
+color: #fff;
+background-color: green;
+border: none;
+border-radius: 15px;
+align-content: center;
+margin-left: 0.25cm;
+height: 100%;
+}
+
+.buttonSave:hover {background-color:darkgreen}
+
+.buttonSave:active {
+background-color: #3e8e41;
+box-shadow: 0 5px darkgreen;
+transform: translateY(4px);
+}
+
+.buttonTask {
+cursor: pointer;
+color: #fff;
+border-radius: 15px;
+padding: 10px 20px;
+border: none;
+z-index: 1000;
+margin: 3px;
+margin-right: 10px;
+}
+
+.micardClass{
+justify-content: center;
+margin: 0.5cm;
+width: auto;
+height: 4cm;
+}
+
+#contenedor0 {
+display: flex;
+flex-direction: row;
+/*padding-bottom: 50px;
+border: solid black;*/
+}
+
+#contenedor0 > div {
+width: 50%;
+cursor: pointer;
+/*border: solid black;*/
+/*height: 500px;*/
+background-color: rgb(147, 225, 199);
+overflow: auto;
+}
+
+/*
+#contenedorAbajo{
+display: flex;
+flex-direction: row;
+cursor: pointer;
+}
+
+#contenedorAbajo > div {
+width: 50%;
+cursor: pointer;
+}
+*/
+
+.divCol1{
+color:firebrick;
+font-size: 20px;
+text-align: -webkit-right;
+font-family: sans-serif;
+margin: 0.5cm;
+margin-left: 0px;
+}
+
+.divCol2{
+cursor: pointer;
+color: green;
+font-size: 20px;
+text-align: left;
+font-family: sans-serif;
+margin: 0.5cm;
+margin-right: 0px;
+}
+
+/*
+.prueba
+{
+color:blue;
+}
+*/
+
+.spaceTask
+{
+height: auto;
+width: auto;
+display: table-caption;
+flex-wrap: wrap;
+margin: 5px;
+/*
+position: relative;
+*/
+}
+
+.page-footer
+{
+width: auto;
+height: auto;
+position: fixed;
+bottom: 15px;
+right: 20px;
+color: green;
+}
+
+.buttonInfo
+{
+display: inline-block;
+padding: 10px 20px;
+font-size: 12px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+outline: none;
+color: #fff;
+border: none;
+background-color: rgb(38, 44, 155);
+border-radius: 15px;
+margin-right: 0.25cm;
+height: 50%;
+}
+
+.buttonInfo:hover {background-color:rgb(6, 6, 83)}
+
+.buttonInfo:active {
+  background-color: rgb(38, 44, 155);
+  box-shadow: 0 5px rgba(5, 0, 24, 0.614);
+  transform: translateY(4px);
+}
+
+/* MODAL*/
+:root {
+  --lightgray: linear-gradient(to right bottom, hsl(236, 50%, 50%), hsl(195, 50%, 50%));
+  --blue: linear-gradient(to right bottom, hsl(236, 50%, 50%), hsl(195, 50%, 50%));
+  --white: linear-gradient(to right bottom, hsl(236, 50%, 50%), hsl(195, 50%, 50%));
+  --black: transparent;
+  --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
+}
+
+.btn-group {
+  text-align: center;
+}
+
+.open-modal {
+  font-weight: bold;
+  background: var(--blue);
+  color: var(--white);
+  padding: 0.75rem 1.75rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+#divInfo
+  {
+    align-self: center;
+  }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--black);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
+}
+
+.modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-dialog {
+  position: relative;
+  max-width: 800px;
+  max-height: 80vh;
+  border-radius: 5px;
+  background: var(--white);
+  overflow: auto;
+  cursor: default;
+  box-shadow: 30px 30px 15px rgba(7, 27, 141, 0.744);
+}
+
+.modal-dialog > * {
+  padding: 1rem;
+}
+
+.modal-header,
+.modal-footer {
+  background: var(--lightgray);
+  color: white;
+  font-family:sans-serif
+
+}
+
+.modal-header {
+  font-size: 22px;
+  color: white;
+  font-family:monospace;
+  font-weight: bold;
+}
+.modal p
+{
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.page-footer span {
+  color: #e31b23;
+}
+
+/*Style cesto*/
+img {
+  max-width: 0px;
+  margin-top: 0px;
+  cursor: pointer;
+ }
+
+ /*Animacion Cesto*/
+@keyframes slidein {
+  from {
+    margin-top: -500px;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+}
+
+ .divCesto 
+ {
+  height: 1px;
+  width: 100px;
+ }
+
+ .imgCesto
+ {
+  cursor: pointer;
+  margin-bottom: 0.9cm;
+ }
+
+ /*Cesto Flotante*/
+.image2{
+  background-image: url("../images/cesto.png");
+  background-repeat: no-repeat;
+  height: 186px;
+  width: 180px;
+  }
+
+.page-footerCesto
+{
+width: auto;
+height: auto;
+position: fixed;
+bottom: 15px;
+left: 20px;
+color: green;
+}
+
+.divFooters
+{
+  padding-bottom: 200px;
+}
+
+/*
+Quitar fondos imagenes
+https://www.remove.bg/es/upload
+*/
+

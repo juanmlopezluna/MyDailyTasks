@@ -1,0 +1,179 @@
+/*
+//Creo boton generico
+const algoNode = document.getElementById('pruebaBotonGenerico');
+const rootAlgo = ReactDOM.createRoot(algoNode);
+
+        const data = {
+          type: 'button',
+          class: 'prueba',
+          alcli: funcioncita,
+          name: 'boton pepe'
+        };
+
+rootAlgo.render(React.createElement(createMyElement,data))
+
+//funcion generica de prueba
+function funcioncita() {alert("DALE NENE");}
+*/
+
+
+/*
+//Old - Crea un boton en particular
+function createSave()
+{
+  return React.createElement(
+    'button',
+    {
+      className: 'buttonSave',
+      onClick: () => saveTask(),
+    },
+    'SAVE'
+  );
+}
+*/
+
+/*
+function createReset()
+{
+  return React.createElement(
+    'button',
+    {
+      className: 'buttonReset',
+      onClick: () => reload(),
+    },
+    'Reset'
+  );
+}
+*/
+
+//prueba react componente
+/*
+function LikeButton() {
+  const [liked, setLiked] = React.useState(false);
+
+  if (liked) {
+    return 'You liked this!';
+  }
+
+  return React.createElement(
+    'button',
+    {
+      onClick: () => setLiked(true),
+    },
+    'Like'
+  );
+}
+
+const rootNode = document.getElementById('like-button-root');
+const root = ReactDOM.createRoot(rootNode);
+root.render(React.createElement(LikeButton));
+
+const anotherRootNode = document.getElementById('another-root');
+const anotherRoot = ReactDOM.createRoot(anotherRootNode);
+anotherRoot.render(React.createElement(LikeButton));
+*/
+
+//Creo titulo
+/*const tit = ReactDOM.createRoot(document.getElementById("title"));
+const element1 = React.createElement(
+  'h1', 
+  {className: 'titv2'},
+  "DAILY TASKS" 
+);
+tit.render(element1);*/
+
+//Creo  subtitulo
+/*
+const subtit = ReactDOM.createRoot(document.getElementById("subtitle"));
+const element2 = React.createElement(
+  'h1', 
+  {className: 'subtiv2'},
+  "This is the website that gives you the chance to MAKE IT easy..."
+);
+subtit.render(element2);
+*/
+
+/*
+//Creo titulo
+const nodo = document.getElementById("title");
+const root = ReactDOM.createRoot(nodo);
+
+element = {
+          type: 'h1',
+          class: 'titv2',
+          clic: null,
+          name: 'DAILY TASKS'
+          }
+
+root.render(React.createElement(createMyElement,element))
+*/
+
+/*
+//prueba creo algo
+element = {type: 'h1', class: 'titv2', clic: null, name: 'mi pepe'}
+createElementsGeneric("pepe",element)
+*/
+
+/*
+//Creo subtitulo v2
+const nodo1 = document.getElementById("subtitle");
+const root1 = ReactDOM.createRoot(nodo1);
+
+element = {
+          type: 'h1',
+          class: 'subtiv2',
+          clic: null,
+          name: 'This is the website that gives you the chance to MAKE IT easy'
+          }
+
+root1.render(React.createElement(createMyElement,element))
+*/
+
+/*
+//Para mostrar la fecha y hora
+setTimeout(function(){
+  setInterval(tick, 1000);
+}, 5000);
+
+function tick() {
+    const myhour = ReactDOM.createRoot(document.getElementById("hour"));
+    const element2 = React.createElement(
+        'h1', 
+        {className: 'hour'},
+        new Date().toLocaleString()
+      );
+      myhour.render(element2);
+    }
+  */
+
+ /*
+//Creo boton SAVE
+const saveBNode = document.getElementById('saveID');
+const rootSaveB = ReactDOM.createRoot(saveBNode);
+
+    element = {
+      type: 'button',
+      class: 'buttonSave',
+      clic: saveTask,
+      name: 'SAVE'
+    };
+
+console.log(element);
+rootSaveB.render(React.createElement(createMyElement,element))
+*/
+
+/*
+//Creo boton Reset
+const resetBNode = document.getElementById('resetID');
+const rootResetB = ReactDOM.createRoot(resetBNode);
+
+      element = {
+        type: 'button',
+        class: 'buttonReset',
+        clic: reload,
+        name: 'Reset'
+      };
+
+  console.log(element);
+  rootResetB.render(React.createElement(createMyElement,element))
+*/

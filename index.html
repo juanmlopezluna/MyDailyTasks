@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+  <!-- Version 1.0: Funcionalidad y vista basica --> 
+  <!-- Version 2.0: Mejora vista y funcionalidad co React.js -->
+  <!-- Version 2.1: Mover botones Tasks -->
+
+  <!-- Proximas mejoras -->
+  <!-- 
+          Bugs
+          > la primera vez que abre la pagina, no hace el onFocus del textBox.. luego si
+          > si al mover task se sale de la pantalla, se rompe
+
+          ** Hostear **
+
+          Proximas versiones
+          > (pensando en app native > sin columna ITS DONE (extra modal) e "imagen itsdone simil tacho")
+
+          > al ordenar que cambie lugar con la cercana          
+          > Color en funcion de COMBO PRIORIDAD 
+          > Que sea responsive toda la pagina (app cel)
+
+          
+        -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script src="js/func.js"></script>
+    <script src="js/funcMoveDrag.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Daily Tasks</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+
+  </head>
+  <body id="myBody">
+
+      <div id="hour" class="divHour"></div>
+      <div id="title"></div>
+      <div id="subtitle"></div>
+      
+      <div id="idDivInput" class="divInputText">
+        
+          <div id="divInfo">
+          <button type="button" class="buttonInfo" data-open="modal1"> Info! </button>
+          </div>
+
+          <div class="modal" id="modal1">
+            <div class="modal-dialog">
+              <header class="modal-header" style="text-align:left">
+                <p style="text-align:center"> HOW TO USE THIS APP </p> </br>
+                  <p> 1. Save your daily tasks </p>   
+                  <p> 2. Move the tasks to IT'S DONE to FINISH them </p> 
+                  <p> 3. If you want to cancel them, move them to the TRASH </p> </br>
+                  <p style="text-align:center"> Make IT Easy </p>
+                  <p style="text-align:center"> ** Use this app with Chrome browser ** </p>
+              </header>
+            </div>
+          </div>
+
+          <input class="intask" type="text" id="idtask" name="ntask" placeholder="  Type your TASK.." disabled="true"/>
+          <div id="saveID" class="divBoton"></div>
+          <div id="resetID" class="divBoton"></div>
+
+      </div>
+
+      <div id="contenedor0" style="visibility:hidden">
+          <div id="idCol1" class="divCol1">
+              <h1 style="text-align: center;margin-top: 5px;margin-bottom: 5px"> TO DO </h1>
+                <div id="TasksList" class="spaceTask"></div>
+          </div>
+
+          <div id="idCol2" class="divCol2">
+              <h1 style="text-align: center;margin-top: 5px;margin-bottom: 5px"> IT'S DONE </h1>
+          </div>
+      </div> 
+
+      <div id="idDivFooter" class="divFooters">
+          <!-- Footer Cesto flotante -->
+          <footer class="page-footerCesto" style="text-align: center">
+            <div id="cesto" class="divCesto">
+                <img id="idCesto" class="imgCesto" src="images/cesto.png"/>
+            </div>
+          </footer>
+
+          <!-- Footer "By The Negrou" -->
+          <footer class="page-footer" style="text-align: center">
+            <div id="image" class="image">
+            </div>
+            <small>Made with <span>❤</span> by The Negrou </a></small>
+          </footer>
+      </div>  
+
+      <!-- Cargar React. -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>   
+    <script src="js/indexReact.js"></script>
+
+  </body>
+
+  <script>
+
+      //Inicio MODAL
+      const openEls = document.querySelectorAll("[data-open]");
+      const closeEls = document.querySelectorAll("[data-close]");
+      const isVisible = "is-visible";
+
+      for (const el of openEls) {
+        el.addEventListener("click", function() {
+          const modalId = this.dataset.open;
+          document.getElementById(modalId).classList.add(isVisible);
+        });
+      }
+
+      for (const el of closeEls) {
+        el.addEventListener("click", function() {
+          this.parentElement.parentElement.parentElement.classList.remove(isVisible);
+        });
+      }
+
+      document.addEventListener("click", e => {
+        if (e.target == document.querySelector(".modal.is-visible")) {
+          document.querySelector(".modal.is-visible").classList.remove(isVisible);
+        }
+      });
+
+      document.addEventListener("keyup", e => {
+        // if we press the ESC
+        if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
+          document.querySelector(".modal.is-visible").classList.remove(isVisible);
+        }
+      });
+      //Fin MODAL
+  </script>
+
+  </html>
+ 
